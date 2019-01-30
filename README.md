@@ -10,5 +10,7 @@ The time went to 2018.12.15. I attended a "Mini Hackthon" hosted by "Girl coding
 Finally I pick up the second one, because I think it could help me learn more about website developing. Of course, I need to pay more time and effort on this decision, but anyway **Just do it!**
 
 Shuyu Zheng
+
 2019.01.30
+
 ---
