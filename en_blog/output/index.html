@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Home</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Home </a></h1>
+                <nav><ul>
+                    <li><a href="/category/git.html">Git</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/git-can-not-track-case-changes-in-file-names.html">Git can not track case changes in file names</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2019-05-29T00:00:00+03:00">
+                Published: Wed 29 May 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shuyu.html">Shuyu</a>
+        </address>
+<p>In <a href="/category/git.html">Git</a>.</p>
+
+</footer><!-- /.post-info --><p>Yesterday when I try to deploy a small web app to <a href="https://dashboard.heroku.com/apps">Heroku</a> platform. It throws error <code>No web processes running</code> again and again. I kept playing with my <code>Procfile</code> <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> for almost 1 hour. It seems I can never make Heroku happy to give me a <code>Dyno</code>.</p>
+<p>Finally, I find this <a href="https://stackoverflow.com/questions/52423143/python-heroku-app-has-0-web-dynos-despite-right-procfile-and-at-right-location">Stack Overflow</a> post. The reason is that I named <code>Procfile</code> with <code>ProcFile</code> in the first <code>git add</code>. Though I corrected that as soon as I realized. The <code>git</code> didn't notice this change of file name. It turns out that this file names <code>ProcFile</code> in the <code>git</code> storage, while it is called <code>Procfile</code> in my local directory. When I <code>push</code> it, its name is <code>ProcFile</code> which is not expected by Heroku. Therefore Heroku didn't give me corresponding web process.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The file at app root directory which will tell Heroku your choice for web process.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
